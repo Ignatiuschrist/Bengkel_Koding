@@ -16,6 +16,7 @@ if (isset($_SESSION['user_id'])) {
     <title>Home | Poliklinik</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -23,6 +24,20 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body class="py-5">
+=======
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
     <header>
         <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
             <div class="container container-fluid">
@@ -95,10 +110,18 @@ if (isset($_SESSION['user_id'])) {
         <?php
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
+<<<<<<< HEAD
 
             if (isset($_SESSION['log'])) {
         ?>
                 <h2 class="text-primary mt-5 d-flex justify-content-center"><?php echo ucwords($_GET['page']) ?></h2>
+=======
+            $page_h1 = str_replace('_', ' ', $page);
+
+            if (isset($_SESSION['log'])) {
+        ?>
+                <h2 class="text-primary mt-5 d-flex justify-content-center"><?php echo ucwords($page_h1) ?></h2>
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
                 <?php
                 include($page . ".php");
             } else {
@@ -144,6 +167,19 @@ if (isset($_SESSION['user_id'])) {
         }
         ?>
     </script>
+<<<<<<< HEAD
+=======
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
 </body>
 
 </html>

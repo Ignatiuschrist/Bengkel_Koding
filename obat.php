@@ -13,6 +13,7 @@ if (isset($_POST['simpan'])) {
     $result = mysqli_query($mysqli, $query);
 
     if ($result) {
+<<<<<<< HEAD
         echo "<script>
             Swal.fire({
                 title: 'Berhasil!',
@@ -24,6 +25,10 @@ if (isset($_POST['simpan'])) {
                 }
             });
         </script>";
+=======
+        header("Location: http://poliklinik.test/index.php?page=obat");
+        exit;
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
     } else {
         echo "Terjadi kesalahan saat menambahkan data obat: " . mysqli_error($mysqli);
     }
@@ -32,6 +37,7 @@ if (isset($_POST['simpan'])) {
 if (isset($_GET['aksi'])) {
     $query = "DELETE FROM `obat` WHERE id='" . $_GET['id'] . "'";
     $result = mysqli_query($mysqli, $query);
+<<<<<<< HEAD
     
     if ($result) {
         echo "<script>
@@ -52,6 +58,12 @@ if (isset($_GET['aksi'])) {
 ?>
 
 
+=======
+    header("Location: http://poliklinik.test/index.php?page=obat");
+}
+?>
+
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
 <div class="container">
     <div class="form-obat">
         <form class="form row" method="POST" action="" name="myForm" onsubmit="return(validate());">
@@ -101,7 +113,11 @@ if (isset($_GET['aksi'])) {
         <table class="table table-responsive">
             <thead class="thead-dark">
                 <tr>
+<<<<<<< HEAD
                     <th scope="col">No.</th>
+=======
+                    <th scope="col">#</th>
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
                     <th scope="col">Nama Obat</th>
                     <th scope="col">Kemasan</th>
                     <th scope="col">Harga</th>

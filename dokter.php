@@ -13,6 +13,7 @@ if (isset($_POST['simpan'])) {
     $result = mysqli_query($mysqli, $query);
 
     if ($result) {
+<<<<<<< HEAD
         echo "<script>
                 window.onload = function() {
                     Swal.fire({
@@ -25,6 +26,10 @@ if (isset($_POST['simpan'])) {
                     });
                 };
               </script>";
+=======
+        header("Location: http://poliklinik.test/index.php?page=dokter");
+        exit;
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
     } else {
         echo "Terjadi kesalahan saat menambahkan data dokter: " . mysqli_error($mysqli);
     }
@@ -33,7 +38,11 @@ if (isset($_POST['simpan'])) {
 if (isset($_GET['aksi'])) {
     $query = "DELETE FROM `dokter` WHERE id='" . $_GET['id'] . "'";
     $result = mysqli_query($mysqli, $query);
+<<<<<<< HEAD
     header("Location: http://localhost:6969/bengkel-koding/index.php?page=dokter");
+=======
+    header("Location: http://poliklinik.test/index.php?page=dokter");
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
 }
 ?>
 
@@ -52,7 +61,11 @@ if (isset($_GET['aksi'])) {
                     $no_hp = $row['no_hp'];
                 }
             ?>
+<<<<<<< HEAD
             <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
+=======
+                <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
             <?php
             }
             ?>
@@ -61,22 +74,34 @@ if (isset($_GET['aksi'])) {
                     <label for="nama" class="fw-bold">
                         Nama
                     </label>
+<<<<<<< HEAD
                     <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama"
                         value="<?php echo $nama ?>" required>
+=======
+                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" value="<?php echo $nama ?>">
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
                 </div>
                 <div class="form-input mt-3">
                     <label for="alamat" class="fw-bold">
                         Alamat
                     </label>
+<<<<<<< HEAD
                     <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat"
                         value="<?php echo $alamat ?>" required>
+=======
+                    <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat" value="<?php echo $alamat ?>">
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
                 </div>
                 <div class="form-input mt-3">
                     <label for="no_hp" class="fw-bold">
                         No HP
                     </label>
+<<<<<<< HEAD
                     <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="No HP"
                         value="<?php echo $no_hp ?>" required>
+=======
+                    <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="No HP" value="<?php echo $no_hp ?>">
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
                 </div>
                 <button type="submit" class="btn btn-primary rounded-pill px-3 mt-3" name="simpan">Simpan</button>
             </div>
@@ -89,7 +114,11 @@ if (isset($_GET['aksi'])) {
         <table class="table table-responsive">
             <thead class="thead-dark">
                 <tr>
+<<<<<<< HEAD
                     <th scope="col">No.</th>
+=======
+                    <th scope="col">#</th>
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
                     <th scope="col">Nama</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">No HP</th>
@@ -97,6 +126,7 @@ if (isset($_GET['aksi'])) {
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
     <?php
     $result = mysqli_query($mysqli, "SELECT * FROM dokter");
     $no = 1;
@@ -140,6 +170,27 @@ if (isset($_GET['aksi'])) {
     }
     ?>
 </tbody>
+=======
+                <?php
+                $result = mysqli_query($mysqli, "SELECT * FROM dokter");
+                $no = 1;
+                while ($data = mysqli_fetch_array($result)) {
+                ?>
+                    <tr>
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $data['nama'] ?></td>
+                        <td><?php echo $data['alamat'] ?></td>
+                        <td><?php echo $data['no_hp'] ?></td>
+                        <td class="d-flex justify-content-center">
+                            <a class="btn btn-success rounded-pill px-3" href="index.php?page=dokter&id=<?php echo $data['id'] ?>">Ubah</a>
+                            <a class="btn btn-danger rounded-pill px-3" href="index.php?page=dokter&id=<?php echo $data['id'] ?>&aksi=hapus">Hapus</a>
+                        </td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+>>>>>>> cad1485504fc1fed50a4d1a638f317c5988ad22a
         </table>
     </div>
 </div>
