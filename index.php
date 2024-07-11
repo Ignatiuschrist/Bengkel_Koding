@@ -16,10 +16,13 @@ if (isset($_SESSION['user_id'])) {
     <title>Home | Poliklinik</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.9.0/dist/sweetalert2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
-<body>
+<body class="py-5">
     <header>
         <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
             <div class="container container-fluid">
@@ -49,6 +52,11 @@ if (isset($_SESSION['user_id'])) {
                                 <li>
                                     <a class="dropdown-item" href="index.php?page=pasien">
                                         Pasien
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="index.php?page=obat">
+                                        Obat
                                     </a>
                                 </li>
                             </ul>
